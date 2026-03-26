@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — NotiVault: Smart Notification History</title>
+<style>
+  :root {
+    --bg:       #FFFFFF;
+    --surface:  #F7F8FA;
+    --border:   #E8EAED;
+    --text:     #1A1A1A;
+    --muted:    #6B7280;
+    --dim:      #9CA3AF;
+    --accent:   #111827;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    font-size: 15px;
+  }
+
+  /* ── Layout ── */
+  .page-wrap {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  /* ── Top banner ── */
+  .top-banner {
+    background: var(--accent);
+    color: #fff;
+    text-align: center;
+    padding: 10px 24px;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+  .top-banner a { color: #fff; text-decoration: underline; }
+
+  /* ── Hero ── */
+  .hero {
+    padding: 52px 0 36px;
+    border-bottom: 1px solid var(--border);
+  }
+  .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 4px 12px;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  .hero p {
+    font-size: 15px;
+    color: var(--muted);
+    max-width: 520px;
+  }
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .meta-row span { display: flex; align-items: center; gap: 5px; }
+
+  /* ── Summary cards ── */
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 10px;
+    margin: 36px 0 40px;
+  }
+  .summary-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+  }
+  .summary-card .icon { font-size: 22px; margin-bottom: 8px; }
+  .summary-card .title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .summary-card .desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+  /* ── Content ── */
+  h2 {
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: 44px;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    letter-spacing: -0.3px;
+  }
+  h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 22px;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  p { margin-bottom: 14px; color: var(--text); }
+  ul, ol { padding-left: 22px; margin-bottom: 14px; }
+  li { margin-bottom: 7px; }
+  strong { font-weight: 600; }
+  a { color: var(--text); }
+
+  /* ── Callout box ── */
+  .callout {
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    margin: 20px 0;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .callout strong { color: var(--text); }
+
+  /* ── Permission table ── */
+  .perm-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+  .perm-table th {
+    text-align: left;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    padding: 0 12px 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .perm-table td {
+    padding: 10px 12px 10px 0;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+  }
+  .perm-table td:first-child { font-weight: 500; white-space: nowrap; padding-right: 20px; }
+  .perm-table tr:last-child td { border-bottom: none; }
+
+  /* ── Other pages nav ── */
+  .other-doc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-top: 44px;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.15s;
+  }
+  .other-doc:hover { border-color: var(--accent); }
+  .other-doc .label { font-size: 12px; color: var(--muted); margin-bottom: 3px; }
+  .other-doc .title-link { font-size: 15px; font-weight: 600; }
+  .other-doc .arrow { font-size: 20px; color: var(--muted); }
+
+  /* ── Footer ── */
+  footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  @media (max-width: 520px) {
+    .hero h1 { font-size: 26px; }
+    .summary-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top-banner">
+  NotiVault: Smart Notification History &nbsp;·&nbsp;
+  <a href="terms.html">Terms &amp; Conditions →</a>
+</div>
+
+<div class="page-wrap">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="badge">Privacy Policy</div>
+    <h1>Your data stays<br>on your device.</h1>
+    <p>NotiVault captures notifications locally. We have no servers, no analytics, and no access to your data — ever.</p>
+    <div class="meta-row">
+      <span>📅 Effective: March 2026</span>
+      <span>🏢 YunoK Tech</span>
+      <span>✉️ yunoktech@gmail.com</span>
+    </div>
+  </div>
+
+  <!-- Summary cards -->
+  <div class="summary-grid">
+    <div class="summary-card">
+      <div class="icon">📵</div>
+      <div class="title">No servers</div>
+      <div class="desc">We operate zero servers. Nothing is sent to us.</div>
+    </div>
+    <div class="summary-card">
+      <div class="icon">🔒</div>
+      <div class="title">Local only</div>
+      <div class="desc">All data lives in your device's private storage.</div>
+    </div>
+    <div class="summary-card">
+      <div class="icon">🚫</div>
+      <div class="title">No selling</div>
+      <div class="desc">We never sell, rent or share your data.</div>
+    </div>
+    <div class="summary-card">
+      <div class="icon">🗑️</div>
+      <div class="title">You control it</div>
+      <div class="desc">Delete everything anytime from Settings.</div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <h2>1. Who we are</h2>
+  <p>NotiVault: Smart Notification History is an Android application developed by <strong>YunoK Tech</strong>. This Privacy Policy explains how the app handles information when you use it. Questions? Reach us at <a href="mailto:yunoktech@gmail.com">yunoktech@gmail.com</a>.</p>
+
+  <h2>2. The Notification Listener permission</h2>
+  <p>NotiVault's core function is to capture and store your notifications. To do this, it requires Android's <strong>Notification Listener Service</strong> permission — a special permission you must enable manually in Android Settings. This is not granted automatically.</p>
+  <p>With this permission active, the app can read the following from incoming notifications:</p>
+  <ul>
+    <li>The name and package identifier of the sending app</li>
+    <li>The notification title and message text</li>
+    <li>The time the notification was received</li>
+    <li>Images attached to notifications (e.g. photos shared via WhatsApp)</li>
+    <li>Sender profile pictures displayed in messaging notifications</li>
+  </ul>
+  <div class="callout">
+    <strong>You stay in control.</strong> You can revoke the Notification Listener permission at any time by going to Android Settings → Apps → NotiVault → Notifications → Remove permission. All previously captured data remains on your device until you delete it.
+  </div>
+
+  <h2>3. How we use your data</h2>
+  <p>Every piece of data NotiVault collects is used for <strong>one purpose only</strong>: showing you your notification history inside the app. Specifically, data is used to:</p>
+  <ul>
+    <li>Display past notifications organised by app, sender, and date</li>
+    <li>Allow you to search and filter your notification history</li>
+    <li>Enable you to export your data to a file on your own device</li>
+    <li>Auto-delete old notifications according to your chosen retention period</li>
+  </ul>
+  <p>Your data is never used for advertising, behavioural profiling, analytics, or machine learning.</p>
+
+  <h2>4. Where data is stored</h2>
+  <p>All data is stored locally on your device in the app's private directory — inaccessible to other apps:</p>
+  <ul>
+    <li><strong>Notification records</strong> — stored in a local SQLite database using Android Room.</li>
+    <li><strong>Images</strong> — saved to the app's private internal storage folder.</li>
+    <li><strong>Settings</strong> (theme, language, retention period) — stored using Android DataStore.</li>
+  </ul>
+  <p>YunoK Tech has no access to any of this data. We do not run servers or cloud infrastructure for NotiVault.</p>
+
+  <h2>5. Blocked apps</h2>
+  <p>You can configure a list of apps whose notifications should not be captured. Notifications from blocked apps are ignored at capture time and never stored. You can manage the blocked list in Settings → Blocked apps.</p>
+
+  <h2>6. Data retention and deletion</h2>
+  <p>You choose how long notifications are kept. Available options are 7 days, 15 days, 30 days, 60 days, or forever. Notifications older than your selected period are automatically deleted by a background cleanup process.</p>
+  <p>You can also delete all captured data immediately at any time by going to <strong>Settings → Clear all data</strong>. Uninstalling the app also removes all associated data.</p>
+
+  <h2>7. Third-party services</h2>
+  <h3>Google AdMob (free version only)</h3>
+  <p>The free version of NotiVault displays advertisements provided by Google AdMob. AdMob may collect device information such as your advertising ID to serve and measure ads. This collection is governed by <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>. If you purchase the premium version, AdMob is not loaded and no advertising data is collected.</p>
+
+  <h3>URL preview fetching</h3>
+  <p>When a notification message contains a URL, NotiVault may fetch Open Graph metadata (title, description, preview image) from that URL so it can display a preview card. Only the URL itself is sent in this request — no personal data, notification content, or device identifiers are included. This feature operates on your network connection and the data received is stored locally for display purposes only.</p>
+
+  <h2>8. Permissions explained</h2>
+  <table class="perm-table">
+    <thead>
+      <tr>
+        <th>Permission</th>
+        <th>Why it's needed</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Notification Listener</td>
+        <td>Core feature — reads incoming notifications to capture and store them.</td>
+      </tr>
+      <tr>
+        <td>INTERNET</td>
+        <td>Required for AdMob ads (free version) and optional URL preview card fetching.</td>
+      </tr>
+      <tr>
+        <td>RECEIVE_BOOT_COMPLETED</td>
+        <td>Restarts the capture service automatically after the device reboots.</td>
+      </tr>
+      <tr>
+        <td>FOREGROUND_SERVICE</td>
+        <td>Keeps the notification capture service running reliably in the background.</td>
+      </tr>
+      <tr>
+        <td>POST_NOTIFICATIONS (API 33+)</td>
+        <td>Shows the persistent foreground service status notification on Android 13+.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>9. Children's privacy</h2>
+  <p>NotiVault is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you are a parent or guardian and believe your child has used this app, please contact us at <a href="mailto:yunoktech@gmail.com">yunoktech@gmail.com</a>.</p>
+
+  <h2>10. Changes to this policy</h2>
+  <p>We may update this Privacy Policy from time to time. The effective date at the top of this page will reflect the most recent revision. We encourage you to review this policy periodically. Continued use of the app after any changes constitutes your acceptance of the updated policy.</p>
+
+  <h2>11. Contact us</h2>
+  <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please reach us at:</p>
+  <p>
+    <strong>Developer:</strong> YunoK Tech<br>
+    <strong>Email:</strong> <a href="mailto:yunoktech@gmail.com">yunoktech@gmail.com</a>
+  </p>
+
+  <!-- Link to Terms -->
+  <a class="other-doc" href="terms.html">
+    <div>
+      <div class="label">Also read</div>
+      <div class="title-link">Terms &amp; Conditions</div>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <footer>
+    <span>© 2026 YunoK Tech. All rights reserved.</span>
+    <span>NotiVault: Smart Notification History</span>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms &amp; Conditions — NotiVault: Smart Notification History</title>
+<style>
+  :root {
+    --bg:       #FFFFFF;
+    --surface:  #F7F8FA;
+    --border:   #E8EAED;
+    --text:     #1A1A1A;
+    --muted:    #6B7280;
+    --dim:      #9CA3AF;
+    --accent:   #111827;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    font-size: 15px;
+  }
+
+  .page-wrap {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  /* ── Top banner ── */
+  .top-banner {
+    background: var(--accent);
+    color: #fff;
+    text-align: center;
+    padding: 10px 24px;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+  .top-banner a { color: #fff; text-decoration: underline; }
+
+  /* ── Hero ── */
+  .hero {
+    padding: 52px 0 36px;
+    border-bottom: 1px solid var(--border);
+  }
+  .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 4px 12px;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  .hero p { font-size: 15px; color: var(--muted); max-width: 520px; }
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  /* ── Content ── */
+  h2 {
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: 44px;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    letter-spacing: -0.3px;
+  }
+  h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 22px;
+    margin-bottom: 8px;
+  }
+  p { margin-bottom: 14px; color: var(--text); }
+  ul, ol { padding-left: 22px; margin-bottom: 14px; }
+  li { margin-bottom: 7px; }
+  strong { font-weight: 600; }
+  a { color: var(--text); }
+
+  /* ── Callout ── */
+  .callout {
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    margin: 20px 0;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .callout strong { color: var(--text); }
+
+  /* ── Warning callout ── */
+  .callout-warn {
+    background: #FFFBEB;
+    border-left: 3px solid #D97706;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #92400E;
+  }
+  .callout-warn strong { color: #78350F; }
+
+  /* ── Highlight list ── */
+  .check-list { list-style: none; padding-left: 0; }
+  .check-list li { padding-left: 24px; position: relative; margin-bottom: 8px; }
+  .check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  /* ── Other pages nav ── */
+  .other-doc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-top: 44px;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.15s;
+  }
+  .other-doc:hover { border-color: var(--accent); }
+  .other-doc .label { font-size: 12px; color: var(--muted); margin-bottom: 3px; }
+  .other-doc .title-link { font-size: 15px; font-weight: 600; }
+  .other-doc .arrow { font-size: 20px; color: var(--muted); }
+
+  /* ── Footer ── */
+  footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  @media (max-width: 520px) {
+    .hero h1 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top-banner">
+  NotiVault: Smart Notification History &nbsp;·&nbsp;
+  <a href="privacy.html">← Privacy Policy</a>
+</div>
+
+<div class="page-wrap">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="badge">Terms &amp; Conditions</div>
+    <h1>Terms of use for<br>NotiVault.</h1>
+    <p>Please read these terms carefully before using the app. By downloading or using NotiVault, you agree to be bound by them.</p>
+    <div class="meta-row">
+      <span>📅 Effective: March 2026</span>
+      <span>🏢 YunoK Tech</span>
+      <span>✉️ yunoktech@gmail.com</span>
+    </div>
+  </div>
+
+  <h2>1. Acceptance of terms</h2>
+  <p>These Terms and Conditions ("Terms") govern your use of NotiVault: Smart Notification History ("the App"), developed and maintained by <strong>YunoK Tech</strong> ("we", "us", or "our"). By installing, accessing, or using the App, you confirm that you have read, understood, and agree to be bound by these Terms.</p>
+  <p>If you do not agree to these Terms, you must not use the App.</p>
+
+  <h2>2. Licence to use</h2>
+  <p>Subject to your compliance with these Terms, YunoK Tech grants you a <strong>limited, non-exclusive, non-transferable, revocable licence</strong> to download and use the App on Android devices that you own or control, solely for your personal, non-commercial purposes.</p>
+  <p>Under this licence, you may <strong>not</strong>:</p>
+  <ul>
+    <li>Copy, reproduce, distribute, or create derivative works of the App</li>
+    <li>Reverse-engineer, decompile, or disassemble any part of the App</li>
+    <li>Sell, sublicense, or transfer the App or any rights to it</li>
+    <li>Remove or obscure any copyright, trademark, or proprietary notices</li>
+    <li>Use the App in any way that violates applicable law or regulation</li>
+  </ul>
+
+  <h2>3. Notification Listener permission</h2>
+  <p>The App's core function requires Android's <strong>Notification Listener Service</strong> permission, which must be granted manually by you through Android system settings.</p>
+
+  <div class="callout-warn">
+    <strong>Important:</strong> By granting this permission, you take full responsibility for the notifications the App captures. Only use NotiVault on devices and accounts you personally own or are explicitly authorised to monitor.
+  </div>
+
+  <p>By granting this permission, you acknowledge and agree that:</p>
+  <ul>
+    <li>The App will capture notification content from all apps on your device, except those you add to the blocked list</li>
+    <li>You are solely responsible for ensuring your use complies with all applicable laws, including those governing communication privacy and data storage in your jurisdiction</li>
+    <li>You will not use the App to capture notifications from devices, accounts, or services belonging to other people without their explicit consent</li>
+    <li>You can revoke this permission at any time through Android Settings → Apps → NotiVault</li>
+  </ul>
+
+  <h2>4. User responsibilities</h2>
+  <p>You are responsible for:</p>
+  <ul class="check-list">
+    <li>Keeping your device physically secure to prevent unauthorised access to notification data stored by the App</li>
+    <li>Any data you export using the App's export feature and how you handle, store, or share that exported data</li>
+    <li>Configuring the blocked apps list to exclude apps whose notifications you do not wish to capture</li>
+    <li>Selecting an appropriate data retention period in Settings to limit stored notification history</li>
+    <li>Ensuring your use of the App does not infringe the rights or privacy of other individuals</li>
+  </ul>
+
+  <h2>5. Intellectual property</h2>
+  <p>The App and all its contents — including source code, design, graphics, icons, text, and all other materials — are the exclusive property of YunoK Tech and are protected by applicable copyright, trademark, and intellectual property laws.</p>
+  <p>Nothing in these Terms grants you any rights to our trademarks, trade names, logos, domain names, or other brand features. "NotiVault" and "YunoK Tech" are brand names of YunoK Tech.</p>
+
+  <h2>6. Disclaimer of warranties</h2>
+  <p>The App is provided <strong>"as is"</strong> and <strong>"as available"</strong> without any warranty of any kind, whether express, implied, statutory, or otherwise.</p>
+  <p>YunoK Tech expressly disclaims all warranties, including but not limited to:</p>
+  <ul>
+    <li>Implied warranties of merchantability, fitness for a particular purpose, or non-infringement</li>
+    <li>Any warranty that the App will be uninterrupted, error-free, or completely secure</li>
+    <li>Any warranty that all notifications will be captured (device manufacturers such as Xiaomi MIUI, OnePlus OxygenOS, and other custom Android skins may aggressively restrict background services, causing missed captures)</li>
+    <li>Any warranty regarding the accuracy, completeness, or reliability of notification content captured by the App</li>
+  </ul>
+
+  <h2>7. Limitation of liability</h2>
+  <p>To the fullest extent permitted by applicable law, YunoK Tech and its affiliates, officers, employees, and agents shall not be liable for any:</p>
+  <ul>
+    <li>Indirect, incidental, special, consequential, or punitive damages</li>
+    <li>Loss of data, loss of privacy, or loss of profits</li>
+    <li>Damages arising from your reliance on notification data captured by the App</li>
+    <li>Damages arising from your inability to use the App for any reason</li>
+  </ul>
+  <p>In jurisdictions that do not permit the exclusion or limitation of certain damages, our total liability to you shall not exceed the amount you paid for the App (if any) in the twelve months preceding the claim.</p>
+
+  <h2>8. In-app purchases and advertisements</h2>
+  <h3>Free version</h3>
+  <p>The free version of the App displays advertisements provided by Google AdMob. By using the free version, you consent to the display of these advertisements.</p>
+
+  <h3>Premium upgrade</h3>
+  <p>You may purchase a one-time premium upgrade through the Google Play Store to remove advertisements. All purchases are:</p>
+  <ul>
+    <li>Processed entirely by Google Play — we do not handle or store your payment information</li>
+    <li>Subject to <a href="https://play.google.com/about/play-terms/" target="_blank">Google Play's Terms of Service</a></li>
+    <li>Generally final and non-refundable, except as required by applicable law or Google Play's refund policy</li>
+  </ul>
+  <p>Premium status is tied to your Google Play account and may be restored on reinstallation using the restore purchase option within the App.</p>
+
+  <h2>9. Privacy</h2>
+  <p>Your use of the App is also governed by our <a href="privacy.html"><strong>Privacy Policy</strong></a>, which is incorporated into these Terms by reference. By agreeing to these Terms, you also agree to the Privacy Policy. Please review it to understand how we handle information.</p>
+
+  <h2>10. Third-party services</h2>
+  <p>The App integrates with the following third-party services, each subject to their own terms:</p>
+  <ul>
+    <li><strong>Google AdMob</strong> — advertising (free version). <a href="https://policies.google.com/terms" target="_blank">Google Terms of Service</a></li>
+    <li><strong>Google Play Billing</strong> — in-app purchases. <a href="https://play.google.com/about/play-terms/" target="_blank">Google Play Terms</a></li>
+  </ul>
+  <p>YunoK Tech is not responsible for the practices of these third-party services.</p>
+
+  <h2>11. Updates and changes to the App</h2>
+  <p>We may release updates to the App at any time. Updates may modify, add, or remove features. We reserve the right to:</p>
+  <ul>
+    <li>Release or withhold updates at our sole discretion</li>
+    <li>Discontinue the App or any feature without prior notice</li>
+    <li>Require you to update the App to continue using certain features</li>
+  </ul>
+  <p>We are under no obligation to maintain any particular version of the App or any particular feature.</p>
+
+  <h2>12. Termination</h2>
+  <p>These Terms remain effective until terminated. Your rights under these Terms will terminate automatically and without notice if you fail to comply with any provision. Upon termination, you must immediately stop using the App and delete all copies from your devices.</p>
+  <p>YunoK Tech may also suspend or terminate your access to the App at any time for any reason at our sole discretion.</p>
+
+  <h2>13. Governing law and disputes</h2>
+  <p>These Terms shall be governed by and construed in accordance with the laws of <strong>India</strong>, without regard to its conflict of law principles.</p>
+  <p>Any dispute, claim, or controversy arising out of or relating to these Terms or your use of the App shall be subject to the exclusive jurisdiction of the courts located in India. You agree to submit to the personal jurisdiction of such courts.</p>
+
+  <h2>14. Changes to these Terms</h2>
+  <p>We reserve the right to modify these Terms at any time. The effective date shown at the top of this page will reflect the most recent revision. Material changes will be communicated through an update to this page.</p>
+  <p>Your continued use of the App after any changes are posted constitutes your acceptance of the revised Terms. If you do not agree to the revised Terms, you must stop using the App.</p>
+
+  <h2>15. Entire agreement</h2>
+  <p>These Terms, together with the Privacy Policy, constitute the entire agreement between you and YunoK Tech regarding your use of the App and supersede all prior agreements, understandings, or representations.</p>
+
+  <h2>16. Contact us</h2>
+  <p>If you have any questions about these Terms, please contact us:</p>
+  <p>
+    <strong>Developer:</strong> YunoK Tech<br>
+    <strong>Email:</strong> <a href="mailto:yunoktech@gmail.com">yunoktech@gmail.com</a>
+  </p>
+
+  <!-- Link to Privacy -->
+  <a class="other-doc" href="privacy.html">
+    <div>
+      <div class="label">Also read</div>
+      <div class="title-link">Privacy Policy</div>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <footer>
+    <span>© 2026 YunoK Tech. All rights reserved.</span>
+    <span>NotiVault: Smart Notification History</span>
+  </footer>
+
+</div>
+</body>
+</html>
