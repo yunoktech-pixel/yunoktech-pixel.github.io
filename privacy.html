@@ -264,6 +264,47 @@ However, we use limited third-party services such as Firebase Analytics and Cras
     <strong>You stay in control.</strong> You can revoke the Notification Listener permission at any time by going to Android Settings → Apps → NotiVault → Notifications → Remove permission. All previously captured data remains on your device until you delete it.
   </div>
 
+<h3>Google Play Billing & Subscriptions</h3>
+<p>
+NotiVault offers optional premium subscriptions and in-app purchases through Google Play Billing.
+All payments are securely processed by Google Play. We do not collect or store your credit card,
+debit card, UPI, banking, or payment credentials on our servers.
+</p>
+
+<p>
+When you purchase a subscription, Google may share limited information with us such as:
+</p>
+
+<ul>
+  <li>Purchase status</li>
+  <li>Subscription expiry date</li>
+  <li>Order token for purchase verification</li>
+  <li>Country and currency information</li>
+</ul>
+
+<p>
+This information is used only to:
+</p>
+
+<ul>
+  <li>Activate premium features</li>
+  <li>Verify subscription validity</li>
+  <li>Prevent fraud and abuse</li>
+  <li>Restore purchases across devices</li>
+</ul>
+
+<p>
+All subscription management, cancellations, refunds, and payment handling are managed directly by Google Play.
+You can manage or cancel your subscription anytime from your Google Play account settings.
+</p>
+
+<p>
+For more information about how Google handles payment data, please review:
+<a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice" target="_blank">
+Google Payments Privacy Notice
+</a>.
+</p>
+
   <h2>3. How we use your data</h2>
   <p>Every piece of data NotiVault collects is used for <strong>one purpose only</strong>: showing you your notification history inside the app. Specifically, data is used to:</p>
   <ul>
@@ -345,8 +386,8 @@ Crash reports do not include your personal notification content.</p>
       </tr>
       <tr>
         <td>INTERNET</td>
-        <td>Required for AdMob ads (free version) and optional URL preview card fetching.</td>
-      </tr>
+          <td>Required for AdMob ads, Google Play Billing, subscription verification, and optional URL preview card fetching.</td>     
+        </tr>
       <tr>
         <td>RECEIVE_BOOT_COMPLETED</td>
         <td>Restarts the capture service automatically after the device reboots.</td>
